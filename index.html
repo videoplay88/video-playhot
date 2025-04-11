@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Player TikTok Style</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: hidden;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.3);
+      border: 2px solid white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .play-button::before {
+      content: '';
+      display: block;
+      border-style: solid;
+      border-width: 10px 0 10px 20px;
+      border-color: transparent transparent transparent white;
+      margin-left: 5px;
+    }
+
+    .continue-button {
+      display: none;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #007BFF;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="video-container">
+    <video id="tiktokVideo" playsinline>
+      <source src="document_6323374075230033065.mp4" type="video/mp4">
+      Browser Anda tidak mendukung video.
+    </video>
+    <div class="play-button" id="playButton"></div>
+    <button class="continue-button" id="continueButton">CONTINUE</button>
+  </div>
+
+  <script>
+    const video = document.getElementById('tiktokVideo');
+    const playButton = document.getElementById('playButton');
+    const continueButton = document.getElementById('continueButton');
+
+    playButton.addEventListener('click', () => {
+      video.play();
+      video.muted = false;
+      video.setAttribute('controls', true);
+      playButton.style.display = 'none';
+    });
+
+    video.addEventListener('ended', () => {
+      continueButton.style.display = 'block';
+    });
+
+    continueButton.addEventListener('click', () => {
+      window.location.href = 'https://www.profitableratecpm.com/fkyjmm51qm?key=5939bb45b0219c73a0518c87f8df1237';
+    });
+  </script>
+</body>
+</html>
